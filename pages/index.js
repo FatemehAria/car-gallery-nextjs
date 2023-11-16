@@ -21,12 +21,16 @@ export default function Home() {
 
       <main>
         <Categories />
-        <h2 className={`flex justify-center items-center font-bold text-2xl ${josefin.className} p-4`}>
+        <h2
+          className={`flex justify-center items-center font-bold text-2xl ${josefin.className} p-4`}
+        >
           All Cars
         </h2>
-        {data.map((item) => (
-          <CarCard car={item} key={item.id} />
-        ))}
+        <div className="grid md:grid-cols-3 md:w-[80%] mx-auto">
+          {data.map((item) => (
+            <CarCard car={item} key={item.id} />
+          ))}
+        </div>
       </main>
     </>
   );

@@ -10,7 +10,7 @@ const Categories = () => {
   return (
     <React.Fragment>
       <div
-        className={`flex justify-center items-center gap-4 font-semibold ${styles.aTagsContainer}`}
+        className={`flex justify-center items-center gap-4 font-semibold  ${styles.aTagsContainer}`}
       >
         <Link href="/sedan">
           Sedan

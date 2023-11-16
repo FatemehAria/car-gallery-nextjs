@@ -7,8 +7,8 @@ const CarCard = ({ car }) => {
   return (
     <div className="grid justify-center items-center gap-1 p-3">
       <Image
-        width={500}
-        height={500}
+        width={400}
+        height={400}
         alt={car.name + car.model}
         src={car.image}
       />

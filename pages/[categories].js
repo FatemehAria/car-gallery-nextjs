@@ -9,12 +9,15 @@ export default function Category() {
   const router = useRouter();
   const { categories } = router.query;
   return <div>
-    <MdArrowBack className="text-2xl font-semibold m-2" onClick={() => router.push("/")}/>
-      {
-        data.map((item) => item.category === categories && <React.Fragment key={item.id}>
+    <MdArrowBack className="text-2xl font-semibold m-2 md:mx-[15%]" onClick={() => router.push("/")}/>
+    <div className="grid md:grid-cols-2 md:w-[80%] mx-auto">
+    { 
+        data.map((item) => item.category === categories && <div key={item.id}>
         <CarCard car= {...item} />
-      </React.Fragment>)
+      </div>)
       }
+    </div>
+      
     </div>
   ;
 }
