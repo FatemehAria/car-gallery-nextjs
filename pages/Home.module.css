@@ -3,4 +3,8 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: 0.5rem;
+    border-radius: 10%;
+    background-color: rgb(252, 243, 243);
+    font-weight: 600;
 }
