@@ -1,10 +1,5 @@
-import Hatchback from "@/public/icons/Hatchback";
-import Sedan from "@/public/icons/Sedan";
-import Sport from "@/public/icons/Sport";
-import Suv from "@/public/icons/Suv";
+import Categories from "@/components/Catgories";
 import Head from "next/head";
-import Link from "next/link";
-import styles from "./Home.module.css";
 
 export default function Home() {
   return (
@@ -17,24 +12,7 @@ export default function Home() {
       </Head>
 
       <main>
-        <div className={`flex justify-center items-center gap-4 font-semibold ${styles.aTagsContainer}`}>
-          <Link href="/sedan">
-            Sedan
-            <Sedan />
-          </Link>
-          <Link href="/suv">
-            SUV
-            <Suv />
-          </Link>
-          <Link href="/hatchback">
-            Hatchback
-            <Hatchback />
-          </Link>
-          <Link href="/sport">
-            Sport
-            <Sport />
-          </Link>
-        </div>
+        <Categories />
       </main>
     </>
   );
