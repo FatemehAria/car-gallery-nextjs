@@ -18,19 +18,19 @@ export default function Home() {
 
       <main>
         <div className={`flex justify-center items-center gap-4 font-semibold ${styles.aTagsContainer}`}>
-          <Link href="/">
+          <Link href="/sedan">
             Sedan
             <Sedan />
           </Link>
-          <Link href="/">
+          <Link href="/suv">
             SUV
             <Suv />
           </Link>
-          <Link href="/">
+          <Link href="/hatchback">
             Hatchback
             <Hatchback />
           </Link>
-          <Link href="/">
+          <Link href="/sport">
             Sport
             <Sport />
           </Link>
