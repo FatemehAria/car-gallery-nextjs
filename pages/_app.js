@@ -6,7 +6,9 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <Header />
-      <Component {...pageProps} />
+      <div className="min-h-[750px]">
+        <Component {...pageProps} />
+      </div>
       <Footer />
     </>
   );

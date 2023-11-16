@@ -7,6 +7,7 @@ import {
   BiLogoTelegram,
   BiLogoYoutube,
 } from "react-icons/bi";
+import { MdOutlineArrowUpward } from "react-icons/md";
 
 export default function Footer() {
   const router = useRouter();
@@ -16,8 +17,15 @@ export default function Footer() {
   return (
     <div className="h-[100%]">
       <div className="flex justify-evenly items-center px-6 py-4 border-b border-b-slate-600 w-[70%] mx-auto">
-        <button onClick={clickHandler}>Back to top</button>
-        <Image width={30} height={30} src="/favicon.ico" alt="logo" onClick={() => router.push("/")} className="cursor-pointer"/>
+        <MdOutlineArrowUpward className="text-2xl font-semibold cursor-pointer" onClick={clickHandler}/>
+        <Image
+          width={30}
+          height={30}
+          src="/favicon.ico"
+          alt="logo"
+          onClick={() => router.push("/")}
+          className="cursor-pointer"
+        />
       </div>
 
       <div className="flex justify-evenly items-center px-6 md:px-80 py-4 border-b border-b-slate-600 w-[70%] mx-auto">
