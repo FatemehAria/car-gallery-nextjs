@@ -1,5 +1,13 @@
 import Categories from "@/components/Catgories";
 import Head from "next/head";
+import data from "../data/carsData";
+import CarCard from "@/components/CarCard";
+import { Josefin_Sans } from "next/font/google";
+
+const josefin = Josefin_Sans({
+  weight: ["700"],
+  subsets: ["latin"],
+});
 
 export default function Home() {
   return (
@@ -13,6 +21,12 @@ export default function Home() {
 
       <main>
         <Categories />
+        <h2 className={`flex justify-center items-center font-bold text-2xl ${josefin.className} p-4`}>
+          All Cars
+        </h2>
+        {data.map((item) => (
+          <CarCard car={item} key={item.id} />
+        ))}
       </main>
     </>
   );
