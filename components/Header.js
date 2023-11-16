@@ -8,7 +8,7 @@ export default function Header() {
     <div className="flex justify-evenly items-center p-5">
       <button onClick={() => router.push("/login")}>Login</button>
       <input placeholder="search your car" />
-      <Image src="/favicon.ico" width={40} height={40} alt="logo"/>
+      <Image src="/favicon.ico" width={40} height={40} alt="logo" onClick={() => router.push("/")}/>
     </div>
   );
 }
