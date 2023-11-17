@@ -5,10 +5,17 @@ import Model from "@/public/icons/Model";
 import Road from "@/public/icons/Road";
 import Image from "next/image";
 import styles from "./cardata.module.css";
+import { MdArrowBack } from "react-icons/md";
+import { useRouter } from "next/router";
 export default function CarData({ item }) {
+  const router = useRouter();
   // console.log(item);
   return (
     <div className="flex flex-col">
+      <MdArrowBack
+        className="text-2xl font-semibold m-2 md:mx-[15%] cursor-pointer"
+        onClick={() => router.back()}
+      />
       <Image
         width={500}
         height={500}
@@ -45,7 +52,9 @@ export default function CarData({ item }) {
       <div className={`${styles.overallInfo}`}>
         <div>
           <Location />
-          <p>Location <span>{item.location}</span></p>
+          <p>
+            Location <span>{item.location}</span>
+          </p>
         </div>
       </div>
 

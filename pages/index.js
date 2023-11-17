@@ -30,7 +30,7 @@ export default function Home() {
         <div className="grid md:grid-cols-3 md:w-[80%] mx-auto">
           {data.map((item) => (
             <Link href={`/cars/${item.id}`} key={item.id}>
-              <CarCard car={item} />
+              <CarCard car={item} className="cursor-pointer"/>
             </Link>
           ))}
         </div>

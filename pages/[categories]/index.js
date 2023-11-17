@@ -4,6 +4,7 @@ import data from "../../data/carsData";
 import CarCard from "@/components/CarCard";
 import React from "react";
 import { MdArrowBack } from "react-icons/md";
+import Link from "next/link";
 
 export default function Category() {
   const router = useRouter();
@@ -18,9 +19,9 @@ export default function Category() {
         {data.map(
           (item) =>
             item.category === categories && (
-              <div key={item.id}>
-                <CarCard car={item} />
-              </div>
+              <Link href={`/cars/${item.id}`} key={item.id}>
+                <CarCard car={item} className="cursor-pointer"/>
+              </Link>
             )
         )}
       </div>
