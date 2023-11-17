@@ -1,0 +1,12 @@
+.overallInfo div {
+  font-weight: bold;
+  display: flex;
+  gap: 0.75rem;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.overallInfo span {
+  font-weight: lighter;
+}
+
