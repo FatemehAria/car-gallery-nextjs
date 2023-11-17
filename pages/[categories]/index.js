@@ -15,7 +15,7 @@ export default function Category() {
         className="text-2xl font-semibold m-2 md:mx-[15%] cursor-pointer"
         onClick={() => router.push("/")}
       />
-      <div className="grid md:grid-cols-2 md:w-[80%] mx-auto">
+      <div className="grid md:grid-cols-2 md:w-[80%] mx-auto shadow-gray-300 shadow-md">
         {data.map(
           (item) =>
             item.category === categories && (

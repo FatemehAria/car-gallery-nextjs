@@ -15,14 +15,14 @@ export default function Header() {
     <div className="flex justify-evenly items-center p-5">
       <button onClick={() => router.push("/login")}>Login</button>
 
-      <div className="flex flex-col justify-center items-center">
+      <div className="flex flex-col w-full justify-center items-center">
         <input
           placeholder="search your car"
           value={text}
           onChange={(e) => setText(e.target.value)}
-          className="outline-none rounded-md border p-1 border-gray-800"
+          className="outline-none rounded-md border p-1 border-gray-800 w-[40%]"
         />
-        <div className="absolute bg-[#F4EAE0] top-[12%] mx-4 rounded-lg">
+        <div className="absolute bg-[#F4EAE0] top-[12%] mx-4 rounded-lg md:flex md:w-[75%] md:justify-center md:items-center lg:w-[50%]">
           {data.map(
             (item) =>
               (item.name.replace("-", " ").toLowerCase() ===

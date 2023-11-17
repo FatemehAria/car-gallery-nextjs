@@ -27,7 +27,7 @@ export default function Home() {
         >
           All Cars
         </h2>
-        <div className="grid md:grid-cols-3 md:w-[80%] mx-auto">
+        <div className="grid md:grid-cols-3 md:w-[80%] mx-auto shadow-gray-300 shadow-md">
           {data.map((item) => (
             <Link href={`/cars/${item.id}`} key={item.id}>
               <CarCard car={item} className="cursor-pointer"/>

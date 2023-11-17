@@ -11,6 +11,7 @@ const CarCard = ({ car }) => {
         height={400}
         alt={car.name + car.model}
         src={car.image}
+        className="rounded-md"
       />
       <p className={`${styles.pTags} font-bold text-lg`}>
         {car.name} {car.model}
