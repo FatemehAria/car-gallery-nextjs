@@ -3,6 +3,7 @@ import Head from "next/head";
 import data from "../data/carsData";
 import CarCard from "@/components/CarCard";
 import { Josefin_Sans } from "next/font/google";
+import Link from "next/link";
 
 const josefin = Josefin_Sans({
   weight: ["700"],
@@ -28,7 +29,9 @@ export default function Home() {
         </h2>
         <div className="grid md:grid-cols-3 md:w-[80%] mx-auto">
           {data.map((item) => (
-            <CarCard car={item} key={item.id} />
+            <Link href={`/cars/${item.id}`} key={item.id}>
+              <CarCard car={item} />
+            </Link>
           ))}
         </div>
       </main>
