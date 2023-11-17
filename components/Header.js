@@ -25,7 +25,9 @@ export default function Header() {
         <div className="absolute bg-[#F4EAE0] top-[12%] mx-4 rounded-lg">
           {data.map(
             (item) =>
-              item.name.toLowerCase() === text && (
+              (item.name.replace("-", " ").toLowerCase() ===
+                text.toLowerCase() ||
+                item.model.toLowerCase() === text.toLowerCase()) && (
                 <div key={item.id} className={`${fade ? "hidden" : ""}`}>
                   <Link
                     href={`/cars/${item.id}`}
