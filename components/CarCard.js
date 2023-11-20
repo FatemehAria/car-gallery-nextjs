@@ -5,10 +5,10 @@ import styles from "./carcard.module.css";
 const CarCard = ({ car }) => {
   //   console.log(car);
   return (
-    <div className="grid justify-center items-center gap-1 p-3">
+    <div className="grid justify-center items-center gap-1 p-3 h-full">
       <Image
-        width={400}
-        height={400}
+        width={300}
+        height={300}
         alt={car.name + car.model}
         src={car.image}
         className="rounded-md"

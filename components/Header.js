@@ -13,8 +13,8 @@ export default function Header() {
   const [fade, setFade] = useState(false);
 
   return (
-    <div className="flex justify-evenly items-center p-5 w-[80%] mx-auto">
-      <BiSolidLogInCircle onClick={() => router.push("/login")} className="text-3xl font-semibold text-[#B0578D] cursor-pointer"/>
+    <div className="flex justify-evenly items-center p-5 w-[70%] mx-auto">
+      <BiSolidLogInCircle onClick={() => router.push("/login")} className="text-4xl font-semibold text-[#B0578D] cursor-pointer"/>
 
       <div className="flex flex-col w-full justify-center items-center">
         <input
@@ -44,8 +44,8 @@ export default function Header() {
 
       <Image
         src="/favicon.ico"
-        width={40}
-        height={40}
+        width={30}
+        height={30}
         alt="logo"
         onClick={() => router.push("/")}
         className="cursor-pointer"

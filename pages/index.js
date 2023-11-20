@@ -1,9 +1,12 @@
+"use client";
 import Categories from "@/components/Catgories";
 import Head from "next/head";
 import data from "../data/carsData";
 import CarCard from "@/components/CarCard";
 import { Josefin_Sans } from "next/font/google";
 import Link from "next/link";
+import { useState } from "react";
+import AllCars from "@/components/AllCars";
 
 const josefin = Josefin_Sans({
   weight: ["700"],
@@ -11,6 +14,8 @@ const josefin = Josefin_Sans({
 });
 
 export default function Home() {
+  const [price, setPrice] = useState({ min: "", max: "" });
+
   return (
     <>
       <Head>
@@ -22,19 +27,29 @@ export default function Home() {
 
       <main>
         <Categories />
+        <div>
+          <input
+            placeholder="enter min price"
+            value={price.min}
+            onChange={(e) => setPrice({ ...price, min: e.target.value })}
+          />
+          <input
+            placeholder="enter max price"
+            value={price.max}
+            onChange={(e) => setPrice({ ...price, max: e.target.value })}
+          />
+          {/* <button onClick={() => handleSearch()}>Search</button> */}
+        </div>
         <h2
           className={`flex justify-center items-center font-bold text-2xl ${josefin.className} p-4`}
         >
           All Cars
         </h2>
-        <div className="grid md:grid-cols-3 md:w-[80%] mx-auto shadow-gray-300 shadow-md">
-          {data.map((item) => (
-            <Link href={`/cars/${item.id}`} key={item.id}>
-              <CarCard car={item} className="cursor-pointer"/>
-            </Link>
-          ))}
+        <div>
+          <AllCars />
         </div>
       </main>
     </>
   );
 }
+// .filter((item) => item.price < price.max && item.price > price.min)
